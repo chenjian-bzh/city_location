@@ -7,20 +7,18 @@ var excelObj=obj[0].data;
 
 var data = [];
 for(var i in excelObj){
-    var arr=[];
+    let obj = {};
     var value=excelObj[i];
-    
-    for(var j in value){
-        console.log("### ",j)
-        console.log("!!! ",value[j])
-        console.log("--------------------------------")
-        arr.push(value[j]);
+    console.log("### ",value)
+    console.log("--------------------------------")
+    obj = {
+        code:value[0],
+        name:value[1]
     }
-    data.push(arr);
+    data.push(obj);
 }
-console.log(data);
 
-// let obj = {
+// let obj = {cls
 //     "data" : data
 // }
 
