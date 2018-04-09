@@ -1,5 +1,6 @@
 let fs = require('fs')
 let xlsx = require('node-xlsx')
+let region = require('../region')
 
 var obj = xlsx.parse('../地区编码.xlsx');
 var excelObj=obj[0].data;
@@ -8,7 +9,11 @@ var data = [];
 for(var i in excelObj){
     var arr=[];
     var value=excelObj[i];
+    
     for(var j in value){
+        console.log("### ",j)
+        console.log("!!! ",value[j])
+        console.log("--------------------------------")
         arr.push(value[j]);
     }
     data.push(arr);
